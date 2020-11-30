@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+    a{
+        text-decoration:none;
+    }
+    </style>
+</head>
+<body>
+    <ol>
+        <li><a href='morgana.html' id='active'>Morgana</a></li>
+        <li><a href='ms.fortune.html'>Ms.Fortune</a></li>
+        <li><a href='lux.html'>Lux</a></li>
+    </ol>
+    <script>
+        var alist=document.querySelectorAll('a');
+        document.write(alist.length+'<br>')
+        alist[1].style.color='red';
+        var i=0;
+        document.write(document.getElementById('active'))
+        while(i<alist.length){
+            alist[i].style.color='pink';
+            document.getElementById('active').style.color='red';
+            i+=1;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: url('bg.jpg');
+        }
+    </style>
+    <title>Motion</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mo-js@latest/build/mo.min.js"></script>
+    <script>
+        var first = new mojs.Shape({
+            shape:'circle',
+            radius: {0:'rand(30,40)'},
+            stroke:'cyan',
+            strokeWidth:{20:0},
+            fill:'none',
+            left:0, top:0,
+            duration:500,
+            delay:0
+        });
+        var seconds=[];
+        var colors=['deeppink','magenta','blue','tomato']
+        for (var i=0; i<4; i++){
+            var second=new mojs.Shape({
+            parent:first.el,
+            shape:'circle',
+            radius: {0:'rand(10,30)'},
+            stroke:colors[i],
+            strokeWidth:{10:0},
+            fill:'none',
+            left:0, top:0,
+            delay:200,
+            duration:500,
+            left:'50%', top:'50%',
+            x:'rand(-50,50)',y:'rand(-50,50)'
+            });
+            seconds.push(second);
+
+        }
+
+        document.addEventListener('click',function(e){
+            first.generate().tune({x:e.pageX, y:e.pageY}).replay();
+            for(var i=0;i<seconds.length;i++){
+                seconds[i].generate().replay();
+            }
+        });
+    </script>
+</body>
+</html>

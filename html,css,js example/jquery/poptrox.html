@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gallery >a img{
+            width: 500px;
+            height: auto;
+        }
+        #gallery >img{
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+
+    <div id="gallery">
+        <a href="phone-booth.jpg"><img src="phone-booth.jpg"></a>
+
+        <img src="rose2.jpg">
+        <a href="rose.jpg"><img src="rose.jpg"></a>
+    </div>
+    <script>
+        var foo=$('#gallery');
+        foo.poptrox({
+            overlayColor: '#000000',
+			overlayOpacity: 0.75,
+            onPopupClose: function() { $body.removeClass('is-covered'); },
+			onPopupOpen: function() { $body.addClass('is-covered'); }
+        });
+    </script>
+</body>
+</html>

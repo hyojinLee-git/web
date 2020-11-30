@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "ec3648a34c41b70671dc38dbb72deb04",
+      "css": "twitter",
+      "code": 61528,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "53d4dc777eeba379412efba3ee1cac9e",
+      "css": "facebook",
+      "code": 61522,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "603ebbc4040323ef53ba1dc37de67717",
+      "css": "instagram",
+      "code": 61533,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "bf882b30900da12fca090d9796bc3030",
+      "css": "mail",
+      "code": 9993,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c82f1ec71a2c9e5af8b00fe5fe27f57e",
+      "css": "hand-grab-o",
+      "code": 62037,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "abf08be829659c02d1f9a711daefa8ce",
+      "css": "hand-paper-o",
+      "code": 62038,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "code": 128279,
+      "src": "entypo"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>thumbnail</title>
+    <style>
+        .wrapper{
+            display: flex;
+        }
+        .thumbnail{
+            background-color: gray;
+            width:200px;
+            height: 200px;
+            margin:10px;
+            background-size: cover ;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .thumbnail.round{
+            border-radius: 20px;
+        }
+        .thumbnail.circle{
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class='wrapper'>
+    <div class="thumbnail" style="background-image: url('autumn.jpg');"></div>
+    <div class="thumbnail round" style="background-image: url('autumn.jpg');"></div>
+    <div class="thumbnail circle" style="background-image: url('autumn.jpg');"></div>
+    </div>
+    <img src="autumn.jpg" alt="">
+</body>
+</html>

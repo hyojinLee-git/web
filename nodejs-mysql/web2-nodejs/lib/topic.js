@@ -148,7 +148,6 @@ exports.delete_process=function(request,response){
       });
       request.on('end',function(){
         var post=qs.parse(body);
-        var id=post.id;
         db.query(`DELETE FROM topic WHERE id=?`,[post.id],function(err,result){
           if (err){
             throw err;

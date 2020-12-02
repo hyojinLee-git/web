@@ -108,15 +108,16 @@ exports.update_process=function(request, response){
     });
     //정보수신 끝을 알림
     request.on('end',function(){
-    var post=qs.parse(body);
-    db.query(`UPDATE author SET name=?, profile=? WHERE id=?`,[post.name,post.profile,post.id],function(err,result){
-        if (err){
-            throw err;
-        }
-        response.writeHead(302,{Location:`/author`});
-        response.end();
+        var post=qs.parse(body);
+        console.log(post);
+        db.query(`UPDATE author SET name=?, profile=? WHERE id=?`,[post.name,post.profile,post.id],function(err,result){
+            if (err){
+                throw err;
+            }
+            response.writeHead(302,{Location:`/author`});
+            response.end();
+            });
         });
-    });
 }
 
 //왜 delete가 안되지?????????????
@@ -129,11 +130,12 @@ exports.delete_process=function(request, response){
     //정보수신 끝을 알림
     request.on('end',function(){
         var post=qs.parse(body);
+        console.log(post);
         db.query(`DELETE FROM topic WHERE author_id=?`,[post.id],function(err1,result1){
             if (err1){
                 throw err1;
             }
-            db.query(`DELETE FROM author WHERE id=?`,[post.id],function(err2,result){
+            db.query(`DELETE FROM author WHERE id=?`,[post.id],function(err2,result2){
                 if (err2){
                     throw err2;
                 }

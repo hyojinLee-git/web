@@ -119,6 +119,7 @@ exports.update_process=function(request, response){
     });
 }
 
+//왜 delete가 안되지?????????????
 exports.delete_process=function(request, response){
     var body='';
     //많은 양의 데이터를 대비하여 사용
@@ -128,12 +129,17 @@ exports.delete_process=function(request, response){
     //정보수신 끝을 알림
     request.on('end',function(){
         var post=qs.parse(body);
-        db.query(`DELETE FROM author WHERE id=?`,[post.id],function(err,result){
-            if (err){
-                throw err;
+        db.query(`DELETE FROM topic WHERE author_id=?`,[post.id],function(err1,result1){
+            if (err1){
+                throw err1;
             }
-            response.writeHead(302,{Location:`/author`});
-            response.end();
+            db.query(`DELETE FROM author WHERE id=?`,[post.id],function(err2,result){
+                if (err2){
+                    throw err2;
+                }
+                response.writeHead(302,{Location:`/author`});
+                response.end();
+            });
         });
     });
 }

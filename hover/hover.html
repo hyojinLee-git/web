@@ -20,10 +20,10 @@
         } 
           
         .container { 
-            border: solid 5px red;
-            /* display: inline; */
+            border: solid 3px red;
+            display: inline-block;
             position: relative; 
-            width: 400px; 
+            width: 4    00px; 
             height: auto; 
         } 
 
@@ -33,6 +33,9 @@
             height: 100px;
             border-radius: 100%;
             z-index: 2;
+            position: absolute;
+            transition: all 0.3s ease; 
+            opacity: 0; 
         }
         .background{
             /* display: inline-flex; */
@@ -43,15 +46,7 @@
             opacity: 0;
             z-index: 1;
             transition: all 0.3s ease; 
-            position: absolute;
         }
-
-        .overlay img{ 
-            position: absolute; 
-            transition: all 0.3s ease; 
-            opacity: 0; 
-        } 
-
         .overlayFade img{ 
             position: absolute;
             top: 50%;
@@ -66,9 +61,6 @@
             opacity: 1;
         }
 
-
-
-
     </style> 
 </head> 
   
@@ -81,6 +73,7 @@
         <br> 
         <br>    
         <!--으어 뭐지-->
+        <!--아어캐하지-->
         <div class="container"> 
             <img src= "model1.jfif" class="image"> 
             <div class="overlay overlayFade profile"><img src="model_profile.jpg"></div> 

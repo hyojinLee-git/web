@@ -73,7 +73,7 @@ exports.create_process=function(request, response){
     var body='';
     //많은 양의 데이터를 대비하여 사용
     request.on('data',function(data){
-    body=body+data;
+      body=body+data;
     });
     //정보수신 끝을 알림
     request.on('end',function(){

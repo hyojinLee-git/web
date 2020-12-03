@@ -76,7 +76,7 @@ var app = http.createServer(function(request,response){
         fs.writeFile(`data/${title}`,description,'utf-8',function(err){
           response.writeHead(302,{Location:`/?id=${title}`});
           response.end();
-        })
+        });
       });
     }
     else if(pathname=='/update'){

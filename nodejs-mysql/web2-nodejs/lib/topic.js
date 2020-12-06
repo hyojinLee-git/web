@@ -157,3 +157,38 @@ exports.delete_process=function(request,response){
         });
       });
 }
+//어렵당..
+exports.search=function(request,response){
+  db.query(`SELECT * FROM topic`,function(err,topics){
+
+      var title='Search';
+      var list=template.list(topics);
+      var html=template.HTML(title,list,
+      `<form action="/search_process" method="form"> 
+        <div>
+            <input type="text" name="keyword">
+            <input type="submit" value="search">
+          </div>
+      </form>`,
+      ``)
+      response.writeHead(200);
+      response.end(html);
+
+  });
+}
+exports.search_process=function(request,response){
+  var body='';
+  request.on('data',function(data){
+    body=body+data;
+  });
+  request.on('end',function(){
+    var post=qs.parse(body);
+    db.query(`SELECT * FROM topic WHERE title=?`,[post.keyword],function(err,result){
+      if (err){
+        throw err;
+      }
+      response.writeHead(302,{Location:`/search/?title=${post.keyword}`});
+      response.end();
+    });
+  });
+}

@@ -19,7 +19,7 @@ module.exports={
       var list='<ul>';
       i=0;
       while (i<filelist.length){
-        list=list+`<li><a href="/page/${filelist[i]}">${filelist[i]}</a></li>`;
+        list=list+`<li><a href="/topic/${filelist[i]}">${filelist[i]}</a></li>`;
         i+=1;
       }
       list=list+'</ul>';

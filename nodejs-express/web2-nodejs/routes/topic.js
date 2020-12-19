@@ -9,7 +9,6 @@ var template=require('../lib/template.js');
 
 
 router.get('/create', (request, response) => {
-  
     var title='WEB-create';       
     var list=template.list(request.list);
     var html=template.HTML(title,list,
@@ -27,7 +26,6 @@ router.get('/create', (request, response) => {
 
 });
 router.post('/create_process', (request, response) => {
-
   /* 
   var body='';
   //많은 양의 데이터를 대비하여 사용

@@ -3,11 +3,11 @@ var template=require('./template.js');
 var url=require('url');
 var qs=require('querystring');
 exports.home=function(request,response){
-    db.query(`SELECT * FROM topic`,function(err,topics){
+    db.query(`SELECT * FROM topic LIMIT 0,5`,function(err,topics){
         var title='Welcome';
         var description='Hello,Node.js';
         var list=template.list(topics);
-        var html=template.HTML(title,list,
+        var html=template.HTML(title,list,25,
         `<h2>${title}</h2>
         <p>${description}</p>
         `,`<a href ="/create">creat</a>`)
@@ -26,10 +26,11 @@ exports.page=function(request, response){
         if (err2){
             throw err2;
         }
+        //console.log(queryData);
         var title=topic[0].title;
         var description=topic[0].description;
         var list=template.list(topics);
-        var html=template.HTML(title,list,
+        var html=template.HTML(title,list,17,
             `<h2>${title}</h2>
             <p>${description}</p>
             <p>by ${topic[0].name}</p>
@@ -49,7 +50,7 @@ exports.create=function(request, response){
         db.query(`SELECT * FROM author`,function(err2,authors){
           var title='Create';
           var list=template.list(topics);
-          var html=template.HTML(title,list,
+          var html=template.HTML(title,list,17,
           `<form action="/create_process" method="post"> 
             <p><input type='text' name="title" placeholder='title'></p>
             <p>
@@ -157,6 +158,7 @@ exports.delete_process=function(request,response){
         });
       });
 }
+
 //어렵당..
 exports.search=function(request,response){
   db.query(`SELECT * FROM topic`,function(err,topics){

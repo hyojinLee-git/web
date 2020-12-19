@@ -3,6 +3,8 @@ var url=require('url');
 var topic=require('./lib/topic');
 const { authorSelect } = require('./lib/template.js');
 var author=require('./lib/author');
+var db=require('./lib/db.js');
+var template=require('./lib/template.js');
 
 //refactoring
 //refactoring nodejs+mysql
@@ -13,10 +15,26 @@ var app = http.createServer(function(request,response){
     if (pathname=='/'){
       if (queryData.id==undefined){
         topic.home(request,response);
-      } else{
+      }
+      else{
         topic.page(request,response);
       }
-    } else if(pathname=='/create'){
+    }
+      else if(pathname==`/?page=2`){
+        db.query(`SELECT * FROM topic LIMIT 5,3`,function(err,topics){
+          var title='Welcome';
+          var description='Hello,Node.js';
+          var list=template.list(topics);
+          var html=template.HTML(title,list,25,
+          `<h2>${title}</h2>
+          <p>${description}</p>
+          `,`<a href ="/create">creat</a>`)
+          console.log(queryData);
+          response.writeHead(200);
+          response.end(html);
+        }); 
+    
+     }  else if(pathname=='/create'){
         topic.create(request, response);
     } else if(pathname=='/create_process'){
         topic.create_process(request, response);

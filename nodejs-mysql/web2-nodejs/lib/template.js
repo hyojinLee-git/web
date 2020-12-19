@@ -1,19 +1,24 @@
 module.exports={
-    HTML: function(title,list,body,control){
+    HTML: function(title,list,data,body,control){
       return `
       <!doctype html>
       <html>
       <head>
         <title>WEB - ${title}</title>
         <meta charset="utf-8">
+        
       </head>
       <body>
         <h1><a href="/">WEB</a></h1>
-        
-          
-        
         <a href="/author">author</a>
+
         ${list}
+        <p>
+          <a href=""><</a>
+          ${this.pageNumber(data)}
+          <a href="">></a>
+          
+        </p>
         ${control}
         ${body}
       </body>
@@ -65,6 +70,20 @@ module.exports={
       }
       tag+=`</table>`
       return tag
+  }, pageNumber: function(data){   //data=SELECT COUNT(*) FROM topic으로 개수 가져오기
+      if (data%5==0){
+        number=parseInt(data/5);
+      } 
+      else{
+        number=parseInt(data/5)+1;  //페이지 개수
+      }
+      list='<a href="/">1</a>';
+      for (var i=2;i<=number;i++){
+        list+=`
+        <a href="/?page=${i}">${i}</a>
+        `
+      }
+      return list
   }
 }
 

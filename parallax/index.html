@@ -3,31 +3,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
     <style>
         body{
             margin: 0;
         }
         .scene{
-            background-image: url('img/heic0910e.jpg');
             height: 100vh;
+            /* viewport:사람이 보는 영역의 크기 */
             overflow: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 200;
+        }
+        .scene.one{
+            background-image: url('img/heic0910e.jpg');
+        }
+        .scene.two{
+            background-image: url('img/heic1501a.jpg');
+        }
+        .scene.three{
+            background-image: url('img/heic1608a.jpg');
         }
         .scene header{
             max-width: 80%;
-            border: 5px solid yellow;
+            color: white;
             position: relative;
             left: 50%;
             top:50%;
             transform: translateX(-50%) translateY(-50%);
             font-size: 1.5rem;
+            text-align: center;
         }
         .scene header h1{
-            font-size: 2rem;;
+            font-size: 2rem;
+            /* 기본글자 크기는 16픽셀 */
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        .scene header h1::after{
+            content:'';
+            border-bottom: 1px solid white;
+            width: 15rem;
+            display: block;
+            margin:0 auto;
+            margin-top:1rem
         }
     </style>
 </head>
 <body>
-    <section class="scene">
+    <section class="scene one">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis porro quod debitis sequi voluptatum officia reprehenderit. Voluptates, officia quo!
+        </header>
+    </section>
+    <section class="scene two">
+        <header>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis porro quod debitis sequi voluptatum officia reprehenderit. Voluptates, officia quo!
+        </header>
+    </section>
+    <section class="scene three">
         <header>
             <h1>Lorem ipsum dolor sit amet.</h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, officiis porro quod debitis sequi voluptatum officia reprehenderit. Voluptates, officia quo!

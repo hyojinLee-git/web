@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tv=new Object();
+        tv.color="white";
+        tv.price=30000;
+        tv.info=function(){
+            //this는 메소드의 객체(tv)를 가리킴
+            document.write("tv색상:"+this.color,"<br>"); 
+            document.write("tv가격:"+this.price,"<br>");
+        }
+        var car={
+            color:"black",
+            price:10000,
+            info:function(){
+                document.write("car 색상:"+this.color,"<br>"); 
+                document.write("car 가격:"+this.price,"<br>");
+            }
+        };
+
+        document.write("<h1>tv 객체 메소드 호출</h1>");
+        tv.info();
+        document.write("<h1>car 객체 메소드 호출</h1>");
+        car.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

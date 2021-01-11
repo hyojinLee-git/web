@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var useremail=prompt("이메일을 입력하세요");
+        var email=[".com",".co.kr",".go.kr",".net"];
+
+        var check1=false;
+        var check2=false;
+        
+        if(useremail.indexOf("@")>0){check1=true;}
+
+        for(var i=0;i<email.length;i++){
+            if(useremail.indexOf(email[i])>0){
+                check2=true;
+            }
+        }
+
+        if(check1&&check2){
+            document.write(useremail);
+        } else{
+            alert("이메일 잘못씀");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

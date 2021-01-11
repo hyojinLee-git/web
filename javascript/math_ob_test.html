@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var rndNum=Math.random()*10+4;
+        //Math.floor(Math.random()*(최댓값-최솟값+1)+최솟값)
+        
+        var game=prompt("가위 바위 보 중 하나를 선택하세요");
+        var gameNum
+        switch (game) {
+            case "가위":
+                gameNum=0;
+                break;
+            case "보":
+                gameNum=1;
+                break;
+            case "바위":
+                gameNum=2;
+                break;
+            default:alert("잘못입력함");
+                location.reload();
+        }
+        var num=Math.floor(Math.random()*3);
+
+        document.write("컴퓨터는?"+num+"<br>");
+        if(gameNum==num){
+            document.write("맞췄습니다.")
+        } else{
+            document.write("틀렸습니다.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

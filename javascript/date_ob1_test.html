@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today=new Date();
+        var nowMonth=today.getMonth()+1;
+        var nowDate=today.getDate();
+        var nowDay=today.getDay();
+
+        document.write("<h1>Today</h1>");
+        document.write(nowMonth+"<br>");
+        document.write(nowDate+"<br>");
+        document.write(nowDay+"<br>");  //일: 0 월: 1 ...토:6
+
+        var worldcup=new Date(2002,4,31);
+        var theMonth=worldcup.getMonth();
+        var theDate=worldcup.getDate();
+        var theDay=worldcup.getDay();
+
+        document.write(theMonth+"<br>");
+        document.write(theDate+"<br>");
+        document.write(theDay+"<br>");
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

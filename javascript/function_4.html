@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userid="splato88";
+        var userpassword="2353";
+
+        function check(id,pw){
+            if(id==userid){
+                if(pw==userpassword){
+                    document.write("welcome!");
+                } else{
+                    alert("비밀번호가 틀립니다.");
+                    location.reload();
+                }
+            } else{
+                alert("아이디가 틀립니다.");
+                location.reload();
+            }
+        }
+
+        var id=prompt("아이디를 입력하세요");
+        var pw=prompt("패스워드를 입력하세요");
+
+        check(id,pw);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

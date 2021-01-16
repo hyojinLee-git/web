@@ -1,0 +1,40 @@
+body{
+    background-image: url(https://source.unsplash.com/user/erondu/1600x900);
+    background-size:cover;
+    min-height: 100vh;
+    margin: 0;
+}
+
+article{
+    background-color: rgba(255, 255, 255, 0.6);
+    color:black;
+    max-width:20rem;
+    position: fixed;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:1rem;
+    padding: 0.2rem;
+    font-weight: 200;
+    
+}
+
+.control{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    padding:0.5rem;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+
+}
+.control ul{
+    list-style: none;
+}
+.control li{
+    display: inline-block;
+    padding: 0 0.5rem;  /*위아래 0, 좌우 0.5rem */
+}
+.control nav a{
+    color: white;
+    text-decoration: none;
+}

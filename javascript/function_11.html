@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script>
+        function CheckWeight(name, height, weight){
+            this.username=name;
+            this.userHeight=height;
+            this.userWeight=weight;
+            this.minWeigth;
+            this.maxWeight;
+        }
+        CheckWeight.prototype.getInfo=function(){
+            var str="";
+            str+="이름: "+this.username+", ";
+            str+="키: "+this.userHeight+", ";
+            str+="몸무게: "+this.userWeight+"<br>";    
+            
+            return str;
+        }
+
+        CheckWeight.prototype.getResult=function(){
+            this.minWeigth=(this.userHeight-100)*0.9-5;
+            this.maxWeight=(this.userHeight-100)*0.9+5;
+
+            if(this.userWeight<=this.maxWeight && this.userWeight>=this.minWeigth){
+                return "정상";
+            } else if(this.userWeight>this.maxWeight){
+                return "과체중"
+            } else{
+                return "저체중"
+            }
+        }
+
+        var jang=new CheckWeight("장보리", 168, 62);
+        document.write(jang.getInfo());
+        document.write(jang.getResult());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

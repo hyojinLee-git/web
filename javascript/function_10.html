@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+    <script>
+        function CheckWeight(name, height, weight){
+            this.userName=name; //걍 name갖다가 쓰면 되지 않나?
+            this.userHeight=height;
+            this.userWeight=weight;
+            this.minWeight;
+            this.maxWeight;
+            this.getInfo=function(){
+                var str='';
+                str+="이름: "+this.userName+",";
+                str+="키: "+this.userHeight+",";
+                str+="몸무게: "+this.userWeight+"<br>";
+
+                return str
+            }
+            this.getResult=function(){
+                this.minWeight=(this.userHeight-100)*0.9-5;
+                this.maxWeight=(this.userHeight-100)*0.9+5;
+
+                if(this.userWeight>this.minWeight && this.userWeight<=this.maxWeight){
+                    return "정상 몸무게입니다."
+                } else if(this.userWeight>this.maxWeight){
+                    return "과체중"
+                } else{
+                    return "저체중"
+                }
+            }
+        }
+
+        var jang=new CheckWeight("장보리", 180, 88);
+        var lee=new CheckWeight("이효진", 168, 54);
+
+        console.log(jang);
+        console.log(lee);
+
+        document.write(jang.getInfo());
+        document.write(jang.getResult());
+        document.write(lee.getResult());
+
+        function Test(name, height, weight){
+            this.getInfo=function(){
+                var str="";
+                str+="이름은"+name+","
+                return name
+            }
+        }
+
+        var na=new Test("nana", 148, 32);
+        console.log(na.getInfo());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

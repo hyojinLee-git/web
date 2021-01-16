@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script>
+        function Test(name, korean, english){
+            this.name=name;
+            this.korean=korean;
+            this.english=english;
+        }
+
+        Test.prototype.getInfo=function(){
+            var str="";
+            str+="이름: "+this.name+"<br>";
+            str+="국어: "+this.korean+"<br>";
+            str+="영어: "+this.english+"<br>";
+
+            return str
+        }
+
+        Test.prototype.getAvg=function(){
+            var str="";
+            var avg=(this.korean+this.english)/2;
+            str+="평균 점수: "+avg+"<br>"
+
+            return str
+        }
+
+        var kim=new Test("김군", 80, 90);
+        var oh=new Test("오군", 100, 80);
+
+        document.write(kim.getInfo());
+        document.write(kim.getAvg()+"<br>");
+        
+        document.write(oh.getInfo());
+        document.write(oh.getAvg());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

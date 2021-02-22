@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Coffee Size</legend>
+            <label>
+                <input type="radio" name="size" value="Tall">
+                Tall
+            </label>
+            <label>
+                <input type="radio" name="size" value="Grande">
+                Grande
+            </label>
+            <label>
+                <input type="radio" name="size" value="Venti">
+                Venti
+            </label>
+        </fieldset>
+    </form>
+    <select name="fruits" size=3 multiple>
+        <optgroup label="like">
+            <option>apple</option>
+            <option>orange</option>
+            <option>mango</option>    
+        </optgroup>
+        <optgroup label="hate">
+            <option>banana</option>
+            <option>pineapple</option>
+        </optgroup>
+    </select>
+    <progress max="100" value="0"></progress>
+    <script>
+        const progress=document.querySelector('progress');
+        const interval=setInterval(function(){
+            progress.value+=10;
+            if(progress.value>=100) clearInterval(interval)
+        },1000)
+    </script>
+</body>
+</html>

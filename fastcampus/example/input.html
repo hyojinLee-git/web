@@ -5,13 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <form action="/login" id="login-form">
         <input type="text" maxlength="6">
     </form>
     <!--form tag와 연결-->
-    <input type="text" form="login-form">
+    <input type="text" form="login-form" value="1234" readonly>
+    <form action="/login" method="GET">
+        <input type="email" name="id" placeholder="email@email.com">
+        <input type="password" name="pw">
+        <input type="submit" value="로그인"><!--제출가능-->
+        <input type="reset" value="초기화">
+    </form>
+    <input type="number" max="9" min="3" step="2">
+    <input type="checkbox">
+    <form action=""><input type="image" alt="제출하기"><!--제출버튼으로 사용가능--></form>
+    <input type="radio" name="radio">
+    <input type="radio" name="radio" checked>
+    <input type="radio" name="radio">
+    <input type="file" multiple>
 
 </body>
 </html>

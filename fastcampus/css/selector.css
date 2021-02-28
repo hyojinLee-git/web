@@ -1,0 +1,15 @@
+.first span.orange{
+    color: red;
+}
+.second ul>li{
+    color: red;
+}
+.third div .orange{
+    color: red;
+}
+.forth .orange+li{
+    color: red;
+}
+.fifth .orange~li{
+    color: red;
+}

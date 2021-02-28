@@ -1,0 +1,41 @@
+.first a:hover{
+    font-weight: bold;
+    font-size: 20px;
+}
+.first .box{
+    width:100px;
+    height: 100px;
+    background-color: tomato;
+    transition: 0.4s;
+}
+.first .box:hover{
+    background-color: yellowgreen;
+}
+.first .box2{
+    width: 100px;
+    height: 100px;
+    background:blue;
+    transition: 0.4s;
+}
+.first .box2:active{
+    width: 200px;
+}
+.first input{
+    border: 1px lightgray solid;
+    padding: 5px;
+    transition: 0.4s;
+}
+.first input:focus{
+    border: 3px red solid;
+    outline: none;
+   
+}
+.second .fruits li:first-child{
+    color: red;
+}
+.second .fruits li:last-child{
+    color: blue;
+}
+.second .fruits li:nth-child(2){
+    color: green;
+}

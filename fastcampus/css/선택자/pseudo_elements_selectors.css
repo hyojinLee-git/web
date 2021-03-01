@@ -1,0 +1,16 @@
+.first ul li::before{
+    content: "숫자";
+    font-weight: bold;
+    color: red;
+    margin-right: 3px;
+}
+.first ul li::after{
+    content: url("https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg");
+
+}
+.second div::before{
+    content: "<";
+}
+.second div::after{
+    content: ">";
+}

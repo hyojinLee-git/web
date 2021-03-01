@@ -1,0 +1,18 @@
+[disabled]{
+    opacity: 0.4;
+    color: red;
+}
+[type="password"]{
+    opacity: 0.5;
+    color: green;
+}
+[class^="btn-"]{
+    font-weight: bold;
+    border-radius: 5px;
+}
+[class$="success"]{
+    color: green;
+}
+[class$="danger"]{
+    color: red;
+}

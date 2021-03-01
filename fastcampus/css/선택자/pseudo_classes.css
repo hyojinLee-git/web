@@ -39,3 +39,14 @@
 .second .fruits li:nth-child(2){
     color: green;
 }
+
+.third .fruits p:nth-child(1){
+    color: red;
+}
+
+.forth .fruits p:nth-of-type(1){
+    color: red;
+}
+.fifth .fruits li:not(.strawberry){
+    color: red;
+}

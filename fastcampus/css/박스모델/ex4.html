@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        .first .child{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            /* float: left; */
+            margin: 20px;
+        }
+        .second .parent{
+            width: 300px;
+            height: 200px;
+            background: cyan;
+            /* margin-top: 50px; */
+        }
+        .second .child{
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+    --------------------------------------------------
+    <div class="second">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+</html>

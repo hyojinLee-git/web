@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Navbar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <style>
         header{
-            background: navy;
-            height: 50px;
+            background: #263343;
             color: white;
-            text-align: center;
-            
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 16px;
         }
         div{
-            display: inline-block;
-
+            padding: 12px 16px;
         }
         .logo{
-            margin-left: 0;
+            font-size: 20px;
         }
-        .nav{
-            justify-content: center;
-            margin:0 200px;
+        .menu{
+            display: flex;
+            
         }
         .address{
-            margin-right: 0;
+
+        }
+        .address a{
+            margin-left: 15px;
         }
         ul li{
-            display: inline-block;
-            margin-left: 10px;
+            margin-right: 10px;
+            padding: 12px 16px;
+        }
+        ul li:hover{
+            background-color: #d49466;
+            border-radius: 5px;
         }
         a{
             text-decoration: none;
@@ -42,20 +49,18 @@
 <body>
     <header>
         <div class="logo">
-            DreamCoding
+            <a href="">DreamCoding</a>
         </div>
-        <div class="nav">
-            <ul>
+        <ul class="menu">
                 <li>Home</li>
                 <li>Gallery</li>
                 <li>Weddings</li>
                 <li>FAQ</li>
                 <li>Bookings</li>
-            </ul>
-        </div>
+        </ul>
         <div class="address">
-            <a href="">twitter</a>
-            <a href="">facebook</a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
         </div>
     </header>
 </body>

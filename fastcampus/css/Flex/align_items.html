@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first.container{
+            border: 4px solid;
+            display: flex;
+            flex-wrap: wrap;
+            height: 400px;
+            align-items: baseline;
+        }
+        .first.container .item{
+            width: 200px;
+            height: 100px;
+            background: tomato;
+            border:4px dashed red;
+            border-radius: 10px;
+        }
+        .first.container .item:nth-child(3){
+            font-size: 50px;
+        }
+        .second.container{
+            border: 4px solid;
+            display: flex;
+            flex-wrap: wrap;
+            height: 400px;
+            align-items: baseline;
+        }
+        .second.container .item{
+            width: 200px;
+            height: 100px;
+            background: tomato;
+            border:4px dashed red;
+            border-radius: 10px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container first">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+    <div class="container second">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+</body>
+</html>

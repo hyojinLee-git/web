@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first .container{
+            border: 2px solid red;
+        }
+        .first .container .item{
+            width: 100px;
+            height: 100px;
+            border:2px solid;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .second .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .second .container{
+            border: 2px solid red;
+        }
+        .second .container .item{
+            width: 100px;
+            height: 100px;
+            border:2px solid;
+            border-radius: 10px;
+            float: left;
+        }
+        .third .container{
+            border: 2px solid red;
+            display: flex;
+        }
+        .third .container .item{
+            width: 100px;
+            height: 100px;
+            border:2px solid;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="container">
+            <div class="item"></div><!--inline 요소임 -->
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="container clearfix">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    <div class="third">
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        .container{
+            width: 200px;
+            height: 300px;
+            background: tomato;
+            position: relative;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
+            z-index: -2;
+            opacity: 1;
+        }
+        
+        .container:hover{
+            opacity: 0;
+        }
+        
+        .box{
+            width: 100%;
+            height: 50%;
+            background: black;
+            position: absolute;
+            bottom: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            z-index: -1;
+        }
+        
+        .profile{
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            display: flex;
+            /* border-bottom: solid dodgerblue 2px; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .name{
+            display: flex;
+            color: white;
+            /* border:1px solid dodgerblue; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,40px);
+            
+        }
+        .container ul{
+            display: flex;
+            /* border:1px solid dodgerblue; */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+        }
+        .container ul li{
+            color: white;
+            list-style: none;
+            font-size: 16px;
+            margin-right: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <div class="box"></div>
+            <img src="https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg" alt="프로필" class="profile">
+            <div class="name">starbucks</div>
+            <ul>
+                <li>facebook</li>
+                <li>instagram</li>
+                <li>mail</li>
+            </ul>
+        
+    </div>
+</body>
+</html>

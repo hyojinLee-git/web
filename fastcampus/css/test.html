@@ -21,8 +21,8 @@
             opacity: 1;
         }
         
-        .container:hover{
-            opacity: 0;
+        .container:hover>.opacity{
+            display: none;
         }
         
         .box{
@@ -77,15 +77,16 @@
 </head>
 <body>
     <div class="container">
-        
-            <div class="box"></div>
-            <img src="https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg" alt="프로필" class="profile">
-            <div class="name">starbucks</div>
-            <ul>
-                <li>facebook</li>
-                <li>instagram</li>
-                <li>mail</li>
-            </ul>
+            <div class="opacity">
+                <div class="box"></div>
+                <img src="https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg" alt="프로필" class="profile">
+                <div class="name">starbucks</div>
+                <ul>
+                    <li>facebook</li>
+                    <li>instagram</li>
+                    <li>mail</li>
+                </ul>
+            </div>
         
     </div>
 </body>

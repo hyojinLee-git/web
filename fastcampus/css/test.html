@@ -10,19 +10,21 @@
         .container{
             width: 200px;
             height: 300px;
-            background: tomato;
+            background: url('https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg');
             position: relative;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            /* justify-content: center;
-            align-items: center; */
-            z-index: -2;
-            opacity: 1;
+            margin: 30px;
+            background-size: cover;
+            background-position: right center;
+            
         }
-        
-        .container:hover>.opacity{
-            display: none;
+        .opacity{
+            opacity: 0;
+        }
+        .container:hover>*{
+            opacity: 1;
         }
         
         .box{
@@ -34,7 +36,6 @@
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             display: flex;
-            z-index: -1;
         }
         
         .profile{
@@ -42,7 +43,6 @@
             height: 80px;
             border-radius: 100%;
             display: flex;
-            /* border-bottom: solid dodgerblue 2px; */
             position: absolute;
             top: 50%;
             left: 50%;
@@ -52,7 +52,6 @@
         .name{
             display: flex;
             color: white;
-            /* border:1px solid dodgerblue; */
             position: absolute;
             top: 50%;
             left: 50%;
@@ -61,7 +60,6 @@
         }
         .container ul{
             display: flex;
-            /* border:1px solid dodgerblue; */
             position: absolute;
             bottom: 0;
             left: 0;
@@ -73,21 +71,21 @@
             font-size: 16px;
             margin-right: 3px;
         }
+    
     </style>
 </head>
 <body>
     <div class="container">
-            <div class="opacity">
-                <div class="box"></div>
-                <img src="https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg" alt="프로필" class="profile">
-                <div class="name">starbucks</div>
-                <ul>
-                    <li>facebook</li>
-                    <li>instagram</li>
-                    <li>mail</li>
-                </ul>
-            </div>
-        
+        <div class="opacity">
+            <div class="box"></div>
+            <img src="starbucks.png" alt="프로필" class="profile">
+            <div class="name">starbucks</div>
+            <ul>
+                <li>facebook</li>
+                <li>instagram</li>
+                <li>mail</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

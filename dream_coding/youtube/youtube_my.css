@@ -1,0 +1,134 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    background: #c4302b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    font-size: 20px;
+    color: white;
+}
+header .logo{
+    margin-left: 10px;
+}
+
+header .logo a{
+    text-decoration: none;
+    color: white;
+
+}
+header ul{
+    display: flex;
+    padding: 5px;
+}
+header ul li{
+    padding: 8px;
+}
+header ul li:hover{
+    background: rgba(153, 36, 32);
+    border-radius: 100%;
+}
+section{
+
+}
+section .media{
+    border: 3px solid dodgerblue;
+    height: 16rem;
+}
+
+section .description{
+    /* border: 3px solid pink; */
+    height: 8rem;
+}
+section .description .title{
+    height: 50%;
+    margin-left: 6px;
+    /* border: solid 3px red */
+}
+section .description .tag{
+    margin-bottom: 10px;
+}
+section .description .tag a{
+    text-decoration: none;
+    font-size: 12px;
+    color: blue;
+    
+}
+section .description .title .plus{
+    margin-top: 3px;
+    color: lightgray;
+    font-size: 6px;
+}
+
+section .description .emotion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    padding: 5px;
+}
+section .description .emotion li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+}
+section .description .emotion li i{
+    font-size: 24px;
+}
+section .description .emotion li:hover{
+    background: lightgray;
+}
+
+section .writer{
+    /* border: 3px solid green; */
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .writer .profile a{
+    /* border:3px solid red; */
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+section .writer .profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+section .writer .profile div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+}
+section .writer .name{
+    margin-bottom: 3px;
+}
+section .writer .subscribers{
+    font-size: 10px;
+    color: lightgray;
+}
+section .writer button{
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    height: 80%;
+    border-radius: 10px;
+    outline: none;
+}
+section .writer button:hover{
+    background-color: lightgray;
+}
+
+section .recommendation{
+    border: 3px solid yellowgreen;
+    height: 8rem;
+}

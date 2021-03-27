@@ -92,7 +92,10 @@ section .writer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
 }
+
 section .writer .profile a{
     /* border:3px solid red; */
     display: flex;
@@ -120,7 +123,7 @@ section .writer button{
     background-color: white;
     border: none;
     font-size: 16px;
-    height: 80%;
+    height: 60%;
     border-radius: 10px;
     outline: none;
 }

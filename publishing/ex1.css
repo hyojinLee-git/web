@@ -1,0 +1,110 @@
+:root{
+    /* Color */
+    --red-color:#d61727;
+    --black-color:#303030;
+    --purple-color:#38324e;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+    --white-color:#fff;
+
+    /* Size */
+    --padding:12px;
+
+    /* Font size */
+    --font-title:30px;
+    --font-large:18px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-micro:10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: var(--padding);
+    font-weight: bold;
+    font-size: var(--font-large);
+}
+/* 사진??? */
+.company{
+    position: relative;
+    background: url('./image/company.jpg');
+    height: 500px;
+}
+.company .overlay{
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.company .intro{
+    position: absolute;
+    color: var(--white-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.introduce{
+    display: flex;
+    height: 250px;
+    color: var(--white-color);
+    position: relative;
+}
+.introduce .info{
+    padding: var(--padding);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
+}
+.introduce .title{
+    font-size: 30px;
+    margin-bottom: var(--padding);
+}
+.introduce .black{
+    background: var(--black-color);
+}
+.introduce .red{
+    background: var(--red-color);
+}
+.introduce .purple{
+    background: var(--purple-color);
+}
+
+.description{
+    height: 300px;
+    position: relative;
+
+}
+.description .position{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: solid red 3px; */
+}
+.description .title{
+    font-size: var(--font-title);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.description .layout{
+    display: flex;
+}
+.description .red-line{
+    width: 100px;
+    height: 5px;
+    background-color: var(--red-color);
+    flex:1 1 20%;
+    margin-right: var(--padding);
+}
+.description .info{
+    flex: 1 1 80%;
+    padding-left:var(--padding);
+}
+
+.image-layout{
+
+}

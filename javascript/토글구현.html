@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <button>색변경</button>
+        <div id="text">안녕</div>
+    </div>
+    <script>
+        let container = document.querySelector('#container');
+        const button = document.querySelector('#container>button');
+        const text = document.querySelector('#text');
+
+        
+
+        button.onclick = () => {
+            let color = text.style.color;
+            console.log(color);
+            color='#ff0000';
+            if (color==='#ff0000'){
+                text.style.color='#0000ff';
+            }else if(color==='#0000ff'){
+                text.style.color='ff0000';
+            }
+            
+        }
+    </script>
+</body>
+</html>

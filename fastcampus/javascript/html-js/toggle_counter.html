@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="number">0</h2>
+    <div>
+        <button class="toggle">클릭</button>
+    </div>
+    <script>
+        const number=document.querySelector('.number');
+        const toggle=document.querySelector('.toggle');
+
+        function increase(current){
+            
+        }
+
+        function solution(min,max){
+            number.innerText=min;
+            toggle.onclick=()=>{
+                if (current>=min){
+                    const current=parseInt(number.innerText,10);
+                    number.innerText=current+1;
+                }else if(current<=max){
+                    number.innerText=current-1;
+                }
+            }
+        }
+        solution(3,6);
+    </script>
+</body>
+</html>

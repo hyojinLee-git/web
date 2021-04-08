@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background: dodgerblue;
+            border:dashed lightgray 2px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+
+<script>
+    const box=document.querySelectorAll('.box');
+    //console.log(box);
+
+    function box_clicked(idx){
+        box[idx].onclick=()=>{
+            console.log(idx);
+        }
+    }
+    function idx(){
+        for (let i=0;i<box.length;i++){ 
+            box[i].onclick=()=>{
+                console.log(i);
+                return i;
+            }
+        }
+    }
+    console.log(idx());
+</script>
+</body>
+</html>

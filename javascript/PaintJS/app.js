@@ -77,7 +77,7 @@ function handleSaveClick(){
     link.href=image                         //image 링크 할당
     link.download="paintjs image";          //다운로드 이름 설정, 속성 설정시 링크를 다운로드한다.
     link.click();
-    console.log(link);
+    //console.log(link);
 }
 
 if(canvas){

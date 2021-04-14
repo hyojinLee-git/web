@@ -53,3 +53,13 @@ function stopTimer(){
 startbtn.addEventListener('click',startTimer);
 stopbtn.addEventListener('click',stopTimer);
 
+var c = document.getElementById('canvas');
+var ctx = c.getContext('2d');
+ctx.beginPath();
+ctx.lineWidth=10;
+
+/* arc(xp,yp,r,start ang,end ang,false|true) */
+/* true= 시대반대방향, false = 시계방향 */ 
+ctx.arc(80,80,50,270*Math.PI/180,180*Math.PI/180,false);
+ctx.stroke();
+

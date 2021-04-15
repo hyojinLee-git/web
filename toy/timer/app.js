@@ -71,6 +71,7 @@ setInterval(()=>{
     ctx.beginPath();
     ctx.arc(80,450,100,(Math.PI/180)*270,(Math.PI/180)*45,false);
     ctx.arc(200,500,50,(Math.PI/180)*270,(Math.PI/180)*(270+degree),false);
+    //뭔가 path안끝내고 이어서 계속 그리는게 나을거같은데
     ctx.stroke();
     //console.log('drawing circle')
 },1000)

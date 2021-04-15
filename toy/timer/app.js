@@ -60,6 +60,22 @@ ctx.lineWidth=10;
 
 /* arc(xp,yp,r,start ang,end ang,false|true) */
 /* true= 시대반대방향, false = 시계방향 */ 
-ctx.arc(80,80,50,270*Math.PI/180,180*Math.PI/180,false);
+ctx.arc(100,130,100,(Math.PI/180)*270,(Math.PI/180)*45,false);
 ctx.stroke();
+ctx.font='100px normal'
+ctx.fillText('hello canvas',0,300);
+
+setInterval(()=>{
+    let degree=0;
+    degree+=60/360;
+    ctx.beginPath();
+    ctx.arc(80,450,100,(Math.PI/180)*270,(Math.PI/180)*45,false);
+    ctx.arc(200,500,50,(Math.PI/180)*270,(Math.PI/180)*(270+degree),false);
+    ctx.stroke();
+    //console.log('drawing circle')
+},1000)
+
+// setInterval(()=>{
+//     console.log('hi')
+// },1000)
 

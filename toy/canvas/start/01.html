@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./modernizr.js"></script>
+    <style>
+        canvas{
+            background: #eee;
+        }
+    </style>
+  </head>
+
+  <body>
+    <canvas class="canvas" width="600px" height="400px">이 브라우저는 캔버스를 지원하지 않습니다.</canvas>
+
+    <script>
+      // Canvas 지원 여부 확인
+      if (Modernizr.canvas) {
+        // console.log('Canvas를 지원하는 브라우저');
+      }
+
+      const canvas = document.querySelector('canvas');
+      if (canvas.getContext) {
+        //console.log('캔버스 지원');
+        const ctx=canvas.getContext('2d');
+
+        ctx.fillRect(50,50,100,100);    //기본은 검은색 이 컨텍스트에 접근할수 있을까?
+        ctx.fillStyle='red';            //색을 칠하고
+        ctx.fillRect(0,0,100,100);      //그림을 그린다
+        
+        ctx.clearRect(80,80,50,50);     //지움
+        ctx.strokeStyle='blue';
+        ctx.strokeRect(150,150,100,100);
+
+        
+
+      }
+    </script>
+  </body>
+</html>

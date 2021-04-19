@@ -62,20 +62,53 @@ ctx.lineWidth=10;
 /* true= 시대반대방향, false = 시계방향 */ 
 ctx.arc(100,130,100,(Math.PI/180)*270,(Math.PI/180)*45,false);
 ctx.stroke();
+ctx.closePath();
 ctx.font='100px normal'
 ctx.fillText('hello canvas',0,300);
+ctx.strokeStyle='#43B9B6';
+ctx.beginPath();
+ctx.arc(200,450,100,(Math.PI/180)*270,(Math.PI/180)*(270+360),false);
+ctx.stroke();
+ctx.closePath();
 
+
+let degree=0;
 setInterval(()=>{
-    let degree=0;
-    degree+=60/360;
+    if(degree<360){
+    ctx.strokeStyle='lightgray';
+    
     ctx.beginPath();
-    ctx.arc(80,450,100,(Math.PI/180)*270,(Math.PI/180)*45,false);
-    ctx.arc(200,500,50,(Math.PI/180)*270,(Math.PI/180)*(270+degree),false);
+    
+    ctx.arc(200,450,100,(Math.PI/180)*270,(Math.PI/180)*(270+degree),false);
+    degree++;
+
     //뭔가 path안끝내고 이어서 계속 그리는게 나을거같은데
     ctx.stroke();
-    //console.log('drawing circle')
-},1000)
+    }
+    //console.log(degree)
+},30)
 
+ctx.beginPath();
+ctx.moveTo(10,800);
+ctx.lineTo(30,800);
+ctx.stroke();
+
+let now=30;
+getLength=(p1,p2)=>{
+    const xs=p2.x-p1.x;
+    return xs
+}
+//console.log(getLength({x:500,y:10},{x:510,y:10}));
+setInterval(()=>{
+    if (now<300){
+    ctx.beginPath();
+    ctx.moveTo(now,800);
+    now++;
+    ctx.lineTo(now,800);
+    ctx.stroke();
+    }
+
+},30);
 // setInterval(()=>{
 //     console.log('hi')
 // },1000)

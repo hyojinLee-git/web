@@ -29,15 +29,16 @@
         xPos += 1;
         // xPos = xPos + 3;
 
-        // if (xPos >= canvas.width-10) {
-        //   return;
-        // }
+        if (xPos >= canvas.width-50) {
+          return;
+        }
 
-        timerId = requestAnimationFrame(draw);
+        timerId = requestAnimationFrame(draw);  //그리는데 최적화,1/60초에 한번씩 호출
+        
 
-        // if (xPos >= canvas.width-10) {
-        //   cancelAnimationFrame(timerId);
-        // }
+        if (xPos >= canvas.width-10) {
+          cancelAnimationFrame(timerId);
+        }
       }
 
       draw();

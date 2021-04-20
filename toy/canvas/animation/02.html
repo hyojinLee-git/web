@@ -30,7 +30,7 @@
         // xPos = xPos + 3;
       }
 
-      timerId = setInterval(draw, 500);
+      timerId = setInterval(draw, 500); //최적화를 안해줌, 배터리 절약면에서 별로
 
       canvas.addEventListener('click', () => {
         clearInterval(timerId);

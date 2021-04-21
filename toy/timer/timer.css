@@ -1,0 +1,58 @@
+.UI{
+    border: 3px solid;
+    width:360px;
+    height: 640px;
+    margin: 50px;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    border: 1px solid lightgray;
+}
+.canvas-wrap{
+    position: relative;
+}
+#canvas{
+    width: 360px;
+    height: 320px;
+    /* border: lightgray 1px solid; */
+}
+.context{
+    position: absolute;
+    top: 200px;
+    left:50%;
+    transform: translate(-50%,0); 
+    /* border: 1px solid; */
+    white-space: nowrap;
+    
+    
+}
+.tab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8%;
+    padding: 8px;
+}
+.circle{
+    width: 20px;
+    background: lightgray;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.button{
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+button{
+    width: 70px;
+    height: 35px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}

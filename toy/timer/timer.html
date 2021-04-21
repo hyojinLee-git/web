@@ -6,46 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <style>
-        .UI{
-            border: 3px solid;
-            width:360px;
-            height: 640px;
-            margin: 50px;
-        }
-        .header{
-            width: 100%;
-            height: 10%;
-            border: 1px solid lightgray;
-        }
-        #canvas{
-            width: 360px;
-            height: 320px;
-            /* border: lightgray 1px solid; */
-        }
-        .button{
-            height: 10%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 15px;
-        }
-        button{
-            width: 70px;
-            height: 35px;
-            font-size: 18px;
-        }
-    </style> 
+    <link rel="stylesheet" href="./timer.css"> 
 </head>
 <body>
     <div class="UI">
-        <div class="header"></div>
+        <div class="header">
+            <h2>header</h2>
+        </div>
+        <div class="canvas-wrap">
         <canvas id="canvas" width="720px" height="640px"></canvas>
+        <div class="context">기사 선정 & 내용 복사 붙여넣기</div>
+    </div>
+        <div class="tab">
+            <div class="circle 1"></div>
+            <div class="circle 2"></div>
+            <div class="circle 3"></div>
+            <div class="circle 4"></div>
+            <div class="circle 5"></div>
+            <div class="circle 6"></div>
+        </div>
         <div class="button">
             <button class="startBtn">start</button>
             <button class="stopBtn">stop</button>
         </div>
     </div>
     <script src="./timer.js"></script>
+    <script src="./tab.js"></script>
 </body>
 </html>

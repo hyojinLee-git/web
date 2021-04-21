@@ -14,6 +14,7 @@
           width: 30px;
           height: 30px;
           border:none;
+          outline: none;
       }
       .color-btn[data-color='black']{background-color: black;}
       .color-btn[data-color='red']{background-color: red;}
@@ -26,17 +27,23 @@
     <h1>painting</h1>
     <canvas class="canvas" width="600" height="400"></canvas>
     <div class="control">
-        <button class="color-btn" data-color="black"></button>
-        <button class="color-btn" data-color="red"></button>
-        <button class="color-btn" data-color="green"></button>
-        <button class="color-btn" data-color="blue"></button>
+        <button class="color-btn" data-type="color" data-color="black"></button>
+        <button class="color-btn" data-type="color" data-color="red"></button>
+        <button class="color-btn" data-type="color" data-color="green"></button>
+        <button class="color-btn" data-type="color" data-color="blue"></button>
+        <button class="image-btn" data-type="image"></button>
     </div>
     <script>
         const canvas=document.querySelector('canvas');
         const ctx=canvas.getContext('2d');
         const control=document.querySelector('.control')
         let painting;   //true일때 그리기
-        let colorVal=
+        let brush='color';      //color or image
+        let colorVal='black';    //color
+
+        const imgElem=new Image();
+        imgElem.src='../images/ilbuni1.png';
+
 
         function downHandler(){
             painting=true;
@@ -46,14 +53,26 @@
         }
         function moveHandler(e){
             if(!painting){ return }
-            //clientX: 전체 스크린을 기준 좌표
+            switch(brush){
+                case 'color':
+                    //clientX: 전체 스크린을 기준 좌표
             //layerY: 캔버스 기준 위치
             ctx.beginPath();
             ctx.arc(e.layerX,e.layerY,10,0,Math.PI*2,false);
             ctx.fill();
+                    break;
+                case 'image':
+                    ctx.drawImage(imgElem,e.layerX,layerY,50,50);
+                    break
+            }
+            
         }
 
-        fun
+        function setColor(e){
+            brush=e.target.getAttribute('data-type');
+            colorVal=e.target.getAttribute('data-color');
+            ctx.fillStyle=colorVal;
+        }
         
         canvas.addEventListener('mousedown',downHandler);
         canvas.addEventListener('mousemove', moveHandler);

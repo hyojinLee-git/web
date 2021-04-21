@@ -10,7 +10,14 @@ ctx.beginPath();
 ctx.arc(360,320,290,(Math.PI/180)*270,(Math.PI/180)*(270+360),false);
 ctx.stroke();
 ctx.closePath();
-
+//위치 조정 필요
+ctx.font='150px normal'
+ctx.fillText(`00:00`,179,290);
+let time=ctx.measureText(`00:00`);
+//let text = ctx.measureText('Hello world');
+//ctx.font='30px normal'
+//ctx.fillText('기사 선정 & 내용 복사 붙여넣기',142,440);
+//let context=ctx.measureText('기사 선정 & 내용 복사 붙여넣기');
 let degree=0;
 timer=setInterval(()=>{
     if(degree<=360){
